@@ -1,0 +1,73 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стилі для навігаційного меню */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Стилі для основного контейнера */
+.container {
+    margin-top: 60px; /* Щоб не перекривалось меню */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Зовнішні відступи між блоками */
+    padding: 20px; /* Зовнішні відступи контейнера */
+    justify-content: center;
+}
+
+/* Стилі для блоків */
+.block {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    padding: 15px; /* Внутрішні відступи */
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Псевдоелементи з юнікод символами */
+.block::before {
+    content: '\2605'; /* Зірочка */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ffcc00;
+}
+
+/* Адаптивність */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
